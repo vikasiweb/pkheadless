@@ -56,10 +56,10 @@ const MyCartIcon: React.FC = () => {
         x-data='{ open: false }'
       >
         <Link href={paths.CART}>
-          <a className='text-primary hover:text-anchor-hover group flex items-center gap-1.5 relative py-2 pr-2'>
+          <a className='text-primary hover:text-anchor-hover group flex items-center gap-1.5 relative py-2'>
             <span className='text-sm hidden xl:inline-block'>my cart</span>{' '}
             <span className='material-icons'>shopping_cart</span>
-            <span className='absolute right-0 -top-1 w-5 h-5 rounded-full flex items-center justify-center bg-gray-200 text-[10px] font-medium text-gray-500'>
+            <span className='absolute -right-2.5 -top-1 w-5 h-5 rounded-full flex items-center justify-center bg-gray-200 text-[10px] font-medium text-gray-500'>
               {totalCartQty}
             </span>
           </a>

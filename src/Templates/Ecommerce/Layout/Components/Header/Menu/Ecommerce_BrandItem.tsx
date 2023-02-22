@@ -327,7 +327,7 @@ const Brand: React.FC<_props> = ({ url, title, content, storeCode }) => {
                 type='button'
                 onMouseOver={() => setFocus(true)}
                 onMouseLeave={() => setFocus(false)}
-                className={`relative z-10 flex items-center transition-colors ease-out duration-200 font-semibold  xl:tracking-widest ${
+                className={`relative z-10 tracking-[1px] flex items-center transition-colors ease-out duration-200 font-semibold  xl:tracking-widest ${
                   sideMenu === 'OPEN'
                     ? 'text-primary-hover'
                     : 'text-white hover:text-primary-hover'
@@ -491,7 +491,7 @@ const Brand: React.FC<_props> = ({ url, title, content, storeCode }) => {
                 type='button'
                 onMouseOver={() => setFocus(true)}
                 onMouseLeave={() => setFocus(false)}
-                className='relative z-10 flex items-center transition-colors ease-out text-base xl:tracking-widest text-anchor py-2.5'
+                className='relative z-10 tracking-[1px] flex items-center transition-colors ease-out text-base xl:tracking-widest text-anchor py-2.5'
               >
                 <span className=''>{title}</span>
                 {/* <!-- <svg className="w-8 h-8 shrink-0 fill-current text-anchor-hover group-hover:text-gray-500 ml-3" :className="{ 'text-anchor-hover rotate-180': open }" viewBox="0 0 32 32">
@@ -624,7 +624,7 @@ const Brand: React.FC<_props> = ({ url, title, content, storeCode }) => {
                 type='button'
                 onMouseOver={() => setFocus(true)}
                 onMouseLeave={() => setFocus(false)}
-                className={`relative z-10 flex items-center transition-colors ease-out duration-200 text-md font-medium border-0 border-b-2 py-2 border-transparent text-white hover:text-primary-hover ${
+                className={`relative z-10 tracking-[1px] flex items-center transition-colors ease-out duration-200 text-md font-medium border-0 border-b-2 py-2 border-transparent text-white hover:text-primary-hover ${
                   sideMenu === 'OPEN'
                     ? 'border-b-primary text-primary-hover'
                     : 'border-transparent text-white hover:text-primary-hover'

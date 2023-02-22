@@ -113,7 +113,7 @@ const Ecommerce_NotificationBar: React.FC = () => {
                 ''
               )}
             </div>
-            <div className='flex items-center gap-3'>
+            <div className='flex items-center'>
               <span className='material-icons top-header-phone-icon mr-1 bg-[#00ce7c] rounded-full !text-[16px] !w-[22px] !h-[22px] !text-black !flex items-center justify-center'>
                 phone
               </span>

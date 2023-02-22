@@ -35,7 +35,8 @@ export type _UserAPIs =
   | 'FetchOrderIds'
   | 'GetStoreCustomer'
   | 'FetchOrderDetails'
-  | 'UpdatePasswordForGuestEmail';
+  | 'UpdatePasswordForGuestEmail'
+  | 'ResetPassword';
 export interface _UserServices {
   service: 'user';
   api: _UserAPIs;
@@ -423,6 +424,49 @@ export const UpdatePasswordForGuestEmail = async (payload: {
       url: url,
       method: 'POST',
       data: payload,
+    },
+  });
+
+  return response;
+};
+
+export const GetEmailByResetToken = async (payload: {
+  token: string;
+}): Promise<any> => {
+  const url = `createNewPasword.json`;
+
+  const response = await CallAPI<any>({
+    name: {
+      service: 'user',
+      api: 'ResetPassword',
+    },
+    request: {
+      url: url,
+      method: 'GET',
+    },
+  });
+  return response;
+};
+
+export const ResetPassword = async (payload: {
+  emailId: string;
+  tokenCode: string;
+  newPassword: string;
+  reEnterPassword: string;
+}): Promise<any> => {
+  const url = `createNewPasword.json`;
+
+  const response = await CallAPI<any>({
+    name: {
+      service: 'user',
+      api: 'ResetPassword',
+    },
+    request: {
+      url: url,
+      method: 'POST',
+      data: {
+        args: payload,
+      },
     },
   });
 

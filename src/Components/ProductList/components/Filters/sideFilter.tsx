@@ -2,7 +2,7 @@ import {
   Accordion,
   AccordionDetails,
   AccordionSummary,
-  Link,
+  Link
 } from '@mui/material';
 import { FilterChangeHandler, FilterType } from '@type/productList.type';
 import { capitalizeFirstLetter } from 'helpers/common.helper';
@@ -31,13 +31,10 @@ const SideFilter = ({
             : 'bg-gray-100 p-4'
         }
       >
-        <div className='text-lg font-medium text-gray-900 hidden lg:block border-b border-neutral-300 pb-4'>
-          Filters
-        </div>
         <div
           className={`${
             storeLayout === _Store.type21 ? 'mt-1' : ''
-          } filter-box filter-type sidebar`}
+          } mt-0 filter-box filter-type`}
         >
           {filters &&
             filters.map((filter, index) => (
@@ -46,7 +43,7 @@ const SideFilter = ({
                 className={
                   storeLayout === _Store.type21
                     ? 'py-4 border-t border-neutral-300 first:border-t-0 first sidebar_wrapper'
-                    : 'pt-0:py-1 border-t border-neutral-300 first:border-t-0  sidebar_wrapper'
+                    : 'pt-4 first:pt-0'
                 }
               >
                 <Accordion
@@ -67,7 +64,7 @@ const SideFilter = ({
                     }}
                     expandIcon={
                       <svg
-                        className='w-8 h-8 shrink-0 fill-current text-gray-400 group-hover:text-gray-500 ml-3 rotate-180'
+                        className='w-8 h-8 shrink-0 fill-current text-gray-400 group-hover:text-gray-500 rotate-180'
                         viewBox='0 0 32 32'
                       >
                         <path d='M16 20l-5.4-5.4 1.4-1.4 4 4 4-4 1.4 1.4z'></path>
@@ -75,7 +72,7 @@ const SideFilter = ({
                     }
                     aria-controls='panel1a-content'
                     id='panel1a-header'
-                    className='flex items-center justify-between w-full group px-0 mb-0'
+                    className='flex items-center justify-between w-full group mb-1 min-h-[auto]'
                   >
                     <div
                       className={`${
@@ -84,14 +81,14 @@ const SideFilter = ({
                           ? 'text-lg font-medium text-gray-900 block capitalize'
                           : storeLayout === _Store.type10
                           ? 'font-medium'
-                          : 'text-sm font-medium text-gray-800 block capitalize'
+                          : 'text-[16px] font-semibold text-gray-900 block uppercase'
                       } `}
                     >
                       {filter.label}
                     </div>
                   </AccordionSummary>
                   <AccordionDetails
-                    className='text-sm bg-transparent p-0'
+                    className='text-[15px] tracking-[.1em]'
                     style={{
                       background: storeLayout === _Store.type21 ? '#fff' : '',
                     }}
@@ -99,10 +96,10 @@ const SideFilter = ({
                     <ul
                       className={
                         filter.label === 'Color'
-                          ? 'flex flex-wrap items-center gap-x-2 gap-y-2 pb-6 pt-2 '
+                          ? 'flex flex-wrap items-center gap-x-1.5 gap-y-2 pb-6 pt-2'
                           : filter.label === 'Category'
                           ? 'ml-0 w-full'
-                          : 'pb-6 pt-2 space-y-3'
+                          : 'pb-6 pt-2 space-y-1.5'
                       }
                     >
                       {filter.options.map((option, ind) => {
@@ -133,11 +130,11 @@ const SideFilter = ({
                                   }}
                                 ></li>
                               ) : filter.label === 'Category' ? (
-                                <li key={ind} className='w-full py-1'>
+                                <li key={ind} className='w-full py-0'>
                                   <Link
                                     key={option.name}
                                     id={option.name}
-                                    className='font-semibold flex items-center text-black !no-underline'
+                                    className='flex items-center text-black font-bold'
                                     href={`${option.sename}.html`}
                                   >
                                     <span className='material-icons-outlined'>
@@ -151,7 +148,10 @@ const SideFilter = ({
                                   {option.subrows && (
                                     <ul className='ml-3'>
                                       {option.subrows?.map((subrow) => (
-                                        <li key={subrow.id} className='py-1'>
+                                        <li
+                                          key={subrow.id}
+                                          className='flex items-center text-black'
+                                        >
                                           {' '}
                                           <Link
                                             key={subrow.name}
@@ -172,7 +172,10 @@ const SideFilter = ({
                                   )}
                                 </li>
                               ) : (
-                                <li className='flex items-center' key={ind}>
+                                <li
+                                  className='flex items-center gap-x-1.5'
+                                  key={ind}
+                                >
                                   <input
                                     id={`${option.name}-${ind}`}
                                     name={filter.label}
@@ -183,15 +186,31 @@ const SideFilter = ({
                                       const { name, value, checked } = e.target;
                                       handleChange(name, value, checked);
                                     }}
-                                    className='h-4 w-4 border-gray-300 rounded text-indigo-600'
+                                    className='h-[13px] w-[13px] border-2 border-black rounded text-[#003a70] focus:ring-[#003a70] focus-visible:border-0'
                                   />
-                                  <label
+                                  {option.label === 'Size' ||
+                                      option.label === 'Price Range' ? (
+                                        <label
+                                          htmlFor={`${option.name}-${ind}`}
+                                          className='text-black'
+                                        >
+                                          {option.name}
+                                        </label>
+                                      ) : (
+                                        <label
+                                          htmlFor={`${option.name}-${ind}`}
+                                          className='text-black'
+                                        >
+                                          {capitalizeFirstLetter(option.name)} ({option?.productCount})
+                                        </label>
+                                      )}
+                                  {/* <label
                                     htmlFor={`${option.name}-${ind}`}
-                                    className='ml-3 text-sm text-gray-600'
+                                    className='text-black'
                                   >
                                     {capitalizeFirstLetter(option.name)} (
                                     {option?.productCount})
-                                  </label>
+                                  </label> */}
                                 </li>
                               )
                             ) : null}

@@ -207,7 +207,7 @@ const Layout1 = ({
                         </div>
                         <div className='h-1 w-full max-w-[250px] bg-gray-300 mx-auto mt-3 text-left'>
                           <div
-                            className='h-1 inline-block bg-primary'
+                            className='h-1 inline-block bg-secondary'
                             style={{
                               width: `${(products.length * 100) / totalCount}%`,
                             }}
@@ -220,9 +220,9 @@ const Layout1 = ({
                         <button
                           onClick={loadMore}
                           type='submit'
-                          className='mt-8 w-auto mx-auto bg-white border border-gray-800 py-3 px-24 flex items-center text-center justify-center text-base font-medium text-gray-800 hover:bg-blue-500 hover:border-blue-500 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500'
+                          className='uppercase text-3xl btn-secondary mt-8 w-auto mx-auto bg-white border border-gray-800 py-3 px-24 flex items-center text-center justify-center text-base font-medium text-gray-800 hover:bg-blue-500 hover:border-blue-500 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500'
                         >
-                          View More
+                          Load More
                         </button>
                       )}
                     </div>

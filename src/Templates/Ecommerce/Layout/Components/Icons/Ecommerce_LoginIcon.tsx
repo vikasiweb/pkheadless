@@ -98,7 +98,9 @@ const LoginIcon: React.FC = () => {
           onClick={toggleLoginModal}
           title='Login'
         >
-          <span className='text-sm hidden xl:inline-block'>login</span>
+          <span className='text-sm hidden xl:inline-block tracking-[1.4px]'>
+            login
+          </span>
           <span className='material-icons'>account_circle</span>
         </button>
         {showModal === 'login' && <LoginModal modalHandler={setShowModal} />}

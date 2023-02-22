@@ -69,7 +69,7 @@ const MenuItem: React.FC<_props> = ({
       <div className=''>
         <button
           type='button'
-          className={`relative z-10 flex items-center transition-colors ease-out duration-200 font-semibold border-0 border-b-2 py-2 border-transparent text-white hover:text-primary-hover border-transparent text-white hover:text-primary-hover`}
+          className={`relative z-10 tracking-[1px] flex items-center transition-colors ease-out duration-200 font-semibold border-0 border-b-2 py-2 border-transparent text-white hover:text-primary-hover border-transparent text-white hover:text-primary-hover`}
         >
           <span className='uppercase text-primary'>{title}</span>
         </button>

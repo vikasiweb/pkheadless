@@ -1,7 +1,7 @@
 import { paths, __SpecialBreadCrumbsPaths } from '@constants/paths.constant';
 import {
   fetchCategoryByCategoryId,
-  fetchCategoryByproductId,
+  fetchCategoryByproductId
 } from '@services/product.service';
 import ImageComp from 'appComponents/reUsable/Image';
 import { useTypedSelector } from 'hooks';

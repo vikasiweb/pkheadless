@@ -100,6 +100,7 @@ export const __console: __Console = {
   },
   user: {
     service: {
+      ResetPassword: true,
       signInUser: false,
       CreateNewAccount: false,
       OrderedBillingDetails: false,

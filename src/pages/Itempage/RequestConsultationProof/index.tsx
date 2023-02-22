@@ -132,7 +132,6 @@ interface _RequestConsultationProps {
 export const getServerSideProps: GetServerSideProps = async (
   context,
 ): Promise<GetServerSidePropsResult<_RequestConsultationProps>> => {
-  const responseBody = context.res;
   let expectedProps: _ExpectedRequestConsultationProps = {
     store: {
       storeId: null,

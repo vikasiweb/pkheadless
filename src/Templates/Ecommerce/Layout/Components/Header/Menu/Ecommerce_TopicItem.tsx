@@ -55,7 +55,7 @@ const Topic: React.FC<_props> = ({ title, url }) => {
               onMouseOver={() => setFocus(true)}
               onMouseOut={() => setFocus(false)}
               type='button'
-              className={`relative z-10 flex items-center transition-colors ease-out duration-200 font-semibold border-0 border-b-2 py-2 border-transparent text-white hover:text-primary-hover ${
+              className={`relative z-10 tracking-[1px] flex items-center transition-colors ease-out duration-200 font-semibold border-0 border-b-2 py-2 border-transparent text-white hover:text-primary-hover ${
                 focus
                   ? `border-b-primary text-primary-hover`
                   : `border-transparent text-white hover:text-primary-hover`
@@ -100,7 +100,7 @@ const Topic: React.FC<_props> = ({ title, url }) => {
             <Link
               href={`${url}`}
               type={'button'}
-              className={`relative z-10 flex items-center transition-colors ease-out duration-200 font-semibold ${
+              className={`relative z-10 tracking-[1px] flex items-center transition-colors ease-out duration-200 font-semibold ${
                 focus
                   ? `text-anchor-hover`
                   : `text-gray-700 hover:text-gray-800`
@@ -181,7 +181,7 @@ const Topic: React.FC<_props> = ({ title, url }) => {
           <div className=''>
             <Link
               href={`${url}`}
-              className={`relative z-10 flex items-center transition-colors ease-out duration-200 text-md font-medium border-0 border-b-2 py-2 border-transparent text-white hover:text-primary-hover hover:border-b-primary ${
+              className={`relative z-10 tracking-[1px] flex items-center transition-colors ease-out duration-200 text-md font-medium border-0 border-b-2 py-2 border-transparent text-white hover:text-primary-hover hover:border-b-primary ${
                 focus
                   ? 'border-blue-500 text-anchor-hover'
                   : 'border-transparent text-gray-700 hover:text-gray-800'

@@ -88,7 +88,7 @@ const WishListIcon: React.FC = () => {
     storeLayout === _Store.type16
   ) {
     return (
-      <div className='flex'>
+      <div className='flex !ml-2'>
         <Link href={paths.WISHLIST}>
           <a className='relative  hover:text-primary' title='Wishlist'>
             <span className='sr-only'>Wishlist</span>{' '}

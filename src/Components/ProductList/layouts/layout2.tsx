@@ -127,7 +127,7 @@ const Layout2 = ({
                       className='mt-8 w-auto mx-auto bg-[#415363] border border-[#415363] py-3 px-24 flex items-center text-center justify-center text-base font-medium text-white hover:bg-[#051c2c] hover:border-[#051c2c] uppercase hover:text-white focus:outline-none focus:ring-0 focus:ring-offset-0 tracking-wider'
                       onClick={() => loadMore()}
                     >
-                      Load More
+                      Load More---
                     </button>
                   )}
                 </div>
