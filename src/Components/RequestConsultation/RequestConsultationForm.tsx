@@ -57,9 +57,10 @@ const _RequestConsultationInitials: _RequestConsultation = {
   message: '',
 };
 
-const RequestConsultationForm: React.FC<{ productId: number }> = ({
-  productId,
-}) => {
+const RequestConsultationForm: React.FC<{
+  productId: number;
+  innerHeading?: boolean;
+}> = ({ productId, innerHeading = false }) => {
   const router = useRouter();
   const [captchaVerified, setverifiedRecaptch] = useState<
     'NOT_VALID' | null | 'VALID'
@@ -144,11 +145,7 @@ const RequestConsultationForm: React.FC<{ productId: number }> = ({
 
   return (
     <div
-      className={
-        storeLayout === _Store.type1
-          ? 'w-full bg-white p-3'
-          : 'w-full lg:w-4/12 px-3'
-      }
+      className={innerHeading ? 'w-full bg-white p-3' : 'w-full lg:w-4/12 px-3'}
     >
       {formSubmitted && <Ecommerce_RequestSubmitted />}
       {!formSubmitted && (
@@ -160,7 +157,7 @@ const RequestConsultationForm: React.FC<{ productId: number }> = ({
           {({ values, handleChange, setFieldValue }) => {
             return (
               <Form>
-                {storeLayout === _Store.type1 ? (
+                {innerHeading ? (
                   <h1 className='text-center page-title1 m-b-20 text-3xl font-bold mb-3'>
                     Request Consultation & Proof
                   </h1>
@@ -169,24 +166,16 @@ const RequestConsultationForm: React.FC<{ productId: number }> = ({
                 )}
                 <div
                   className={
-                    storeLayout === _Store.type1
+                    innerHeading
                       ? 'flex flex-wrap  gap-y-4 border'
                       : 'flex flex-wrap -mx-3 gap-y-4'
                   }
                 >
                   <div
-                    className={
-                      storeLayout === _Store.type1
-                        ? 'w-full p-3 pb-0'
-                        : 'w-full px-3'
-                    }
+                    className={innerHeading ? 'w-full p-3 pb-0' : 'w-full px-3'}
                   >
                     <div className='bg-gray-100 flex flex-wrap items-center justify-between p-1'>
-                      <div
-                        className={
-                          storeLayout === _Store.type1 ? 'font-bold' : ''
-                        }
-                      >
+                      <div className={innerHeading ? 'font-bold' : ''}>
                         Contact Information
                       </div>
                       <div className='text-red-500 text-xs'>

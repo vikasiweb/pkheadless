@@ -262,7 +262,7 @@ const AccountSetting = () => {
                             e.preventDefault();
                             setActiveEditBox(true);
                           }}
-                          className='btn btn-primary'
+                          className='btn btn-secondary'
                         >
                           Edit Profile
                         </button>

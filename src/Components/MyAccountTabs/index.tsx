@@ -31,19 +31,21 @@ const MyAccountTabs: React.FC = () => {
             MY ACCOUNT
           </div>
           <div className='bg-gray-100 mt-5 mb-5 flex justify-center'>
-            <ul className='flex flex-wrap gap-4'>
+            <ul className='flex flex-wrap w-full justify-center gap-x-[7px]'>
               {_TABS.map((tab, index) => {
                 if (tab.path === null) {
                   return (
                     <li
                       key={index}
-                      className={`border-b border-transparent text-base font-semibold px-3 py-3 ${
-                        tab.path === currentPath ? 'border-blue-500' : ''
+                      className={`border-t border-transparent hover:border-black text-base font-semibold px-[3%] py-2.5 ${
+                        tab.path === currentPath ? 'border-black' : ''
                       }`}
                     >
                       <button
                         onClick={logoutHandler}
-                        className={tab.path === currentPath ? 'active' : ''}
+                        className={`text-[#0a1c2b] hover:text-[#0a1c2b] focus:text-[#0a1c2b] font-semibold ${
+                          tab.path === currentPath ? 'active' : ''
+                        }`}
                       >
                         {tab.label}
                       </button>
@@ -55,12 +57,18 @@ const MyAccountTabs: React.FC = () => {
                 return (
                   <li
                     key={index}
-                    className={`border-t text-base font-semibold px-3 py-3 ${
-                      activeDir ? 'border-blue-500' : ''
+                    className={`border-t border-transparent hover:border-black text-base font-semibold px-[3%] py-2.5  ${
+                      activeDir ? 'border-black' : ''
                     }`}
                   >
-                    <Link href={tab.path} className={activeDir ? 'active' : ''}>
-                      {tab.label}
+                    <Link href={tab.path}>
+                      <a
+                        className={`text-[#0a1c2b] hover:text-[#0a1c2b] focus:text-[#0a1c2b] font-semibold ${
+                          activeDir ? 'active' : ''
+                        }`}
+                      >
+                        {tab.label}
+                      </a>
                     </Link>
                   </li>
                 );

@@ -1,7 +1,7 @@
 //import React, { useState, useEffect, useRef } from "react";
 import ElementAccordionDisplay from 'Components/Home/ElementAccordionDisplay';
 import ElementCarouselDisplay from 'Components/Home/ElementCarouselDisplay';
-import { useTypedSelector } from 'hooks';
+import { useActions, useTypedSelector } from 'hooks';
 import { useEffect, useState } from 'react';
 import FeaturedProducts from '../../Components/Home/FeaturedProducts';
 
@@ -11,12 +11,20 @@ const Home = (props) => {
   const pageData = props.props?.pageData;
   const [componentHtml, setComponentHtml] = useState([]);
   const storeId = useTypedSelector((state) => state.store.id);
+  const { topic_set_isCMS } = useActions();
 
   // const pathArray = document.location.pathname.split('/');
   // const slug = pathArray.at(-1);
   // const [pageData, setPageData] = useState([]);
 
   // const [componentHtml, setComponentHtml] = useState([]);
+
+  useEffect(() => {
+    topic_set_isCMS(true);
+    return () => {
+      topic_set_isCMS(false);
+    };
+  }, []);
 
   useEffect(() => {
     // let pageId = pageData.id;

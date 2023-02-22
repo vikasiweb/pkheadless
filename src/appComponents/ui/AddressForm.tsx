@@ -133,6 +133,7 @@ const AddressForm: React.FC<Props> = ({
         handleBlur,
         handleSubmit,
         submitForm,
+        isSubmitting,
         setFieldValue,
       }) => (
         <>
@@ -494,6 +495,8 @@ const AddressForm: React.FC<Props> = ({
                 Cancel
               </button>
               <button
+                type='submit'
+                disabled={isSubmitting}
                 data-modal-toggle='AddNewAddress'
                 onClick={submitForm}
                 className='btn btn-primary'

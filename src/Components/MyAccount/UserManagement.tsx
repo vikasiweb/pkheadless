@@ -138,7 +138,7 @@ const UserManagement = () => {
               <div className='hidden lg:col-span-2 lg:flex lg:items-center lg:justify-end lg:space-x-4'>
                 <button
                   data-modal-toggle='adduserModal'
-                  className='btn btn-primary'
+                  className='btn btn-secondary'
                   onClick={() => setShowAddUserModal(true)}
                 >
                   <span>Add User</span>

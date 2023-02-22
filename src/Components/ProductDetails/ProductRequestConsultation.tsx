@@ -32,7 +32,7 @@ const ProductRequestConsultation: React.FC<{ storeCode: string }> = ({
           className='text-anchor hover:text-anchor-hover underline font-semibold'
         >
           Request Consultation and Proof{' '}
-        </button> 
+        </button>
         &gt;
       </div>
     );

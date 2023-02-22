@@ -61,7 +61,7 @@ const AdaAccessibility = () => {
             </div>
             <div className='w-full lg:w-1/3 px-3'>
               <div className='h-full bg-gray-100 p-3'>
-                <RequestConsultationForm productId={0} />
+                <RequestConsultationForm productId={0} innerHeading={true} />
               </div>
             </div>
           </div>

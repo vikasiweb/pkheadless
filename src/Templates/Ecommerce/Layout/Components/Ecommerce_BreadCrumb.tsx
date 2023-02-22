@@ -16,14 +16,22 @@ const BreadCrumb: React.FC = () => {
   const router = useRouter();
   const pageType = useTypedSelector((state) => state.store.pageType);
   const product = useTypedSelector((state) => state.product.product);
+  const isCMSpage = useTypedSelector((state) => state.home.isCMS_page);
   const [breadCrumbs, setBreadCrumbs] = useState<
     { name: string; url: string }[]
   >([]);
   const getBreadCrubs = async () => {
+    if (isCMSpage) {
+      return [
+        { name: 'Home', url: '/' },
+        { name: pageType.slug, url: `${pageType.slug}.html` },
+      ];
+    }
+
     if (pageType.type === 'brand') {
       return [
         { name: 'Home', url: '/' },
-        { name: pageType.slug, url: pageType.slug },
+        { name: pageType.slug, url: `${pageType.slug}.html` },
       ];
     }
 
