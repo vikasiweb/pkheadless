@@ -4,6 +4,7 @@ import { useActions, useTypedSelector } from 'hooks';
 import { IndexLabels } from 'mock/startModal.mock';
 import React, { useEffect, useState } from 'react';
 import Select from 'react-select';
+import { LogoDetails } from './SOM_CustomizeLogoOptions';
 
 const dummyLogoImage = 'images/logo-to-be-submitted.webp';
 
@@ -15,6 +16,7 @@ interface _props {
   textIndex: number;
   price: 'FREE' | number;
   onRemove: () => void;
+  editDetails: LogoDetails | null;
 }
 
 const SOM_LogoOption: React.FC<_props> = ({
@@ -25,6 +27,7 @@ const SOM_LogoOption: React.FC<_props> = ({
   textIndex,
   price: logoPrice,
   onRemove: removeHandler,
+  editDetails,
 }) => {
   const { setShowLoader, showModal, product_updateLogoDetails } = useActions();
   const [logoStatus, setLogoStatus] = useState<null | 'submitted' | 'later'>(
@@ -48,9 +51,18 @@ const SOM_LogoOption: React.FC<_props> = ({
     previewURL: string;
   } | null>(null);
 
+  useEffect(() => {
+    if (editDetails) {
+      setSelectedLocation(editDetails.selectedLocation);
+      setFileToUpload(editDetails.fileToUpload);
+      setLogoStatus(editDetails.logoStatus as null | 'submitted' | 'later');
+    }
+  }, [editDetails]);
+
   const availableOptions = useTypedSelector(
     (state) => state.product.som_logos.availableOptions,
   );
+  console.log(availableOptions);
 
   let option: any = availableOptions?.map((item) => {
     return {

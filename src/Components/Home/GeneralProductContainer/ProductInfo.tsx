@@ -8,7 +8,7 @@ import MuiTab from '@mui/material/Tab';
 import { FetchDataByBrand } from '@services/brand.service';
 import { _SelectedBrands } from '@type/APIs/storeDetails.res';
 import { GetlAllProductList } from '@type/productList.type';
-import BrandProductListing from './BrandProducsListing';
+import ProductListing from './ProductListing';
 
 interface _props {
   dataArr: _SelectedBrands;
@@ -26,23 +26,8 @@ const Tab = styled(MuiTab)(({ theme }) => ({
 
 const ProductsInfo: React.FC<_props> = ({ dataArr }) => {
   // ** State
-  const initialData = [
-    {
-      imageUrl: '',
-      imap: '',
-      getProductImageOptionList: [],
-      productId: 0,
-      productName: '',
-      productSEName: '',
-      productDisplayOrder: 0,
-      ourCost: 0,
-      msrp: 0,
-      salePrice: 0,
-    },
-  ];
 
-  const [brandsData, setBrandsData] =
-    useState<GetlAllProductList[]>(initialData);
+  const [brandsData, setBrandsData] = useState<GetlAllProductList[] | []>([]);
   const storeId = useTypedSelector((state) => state.store.id);
 
   const fetchBrandData = async () => {
@@ -63,7 +48,7 @@ const ProductsInfo: React.FC<_props> = ({ dataArr }) => {
 
   return (
     <>
-      <BrandProductListing brandsData={brandsData} />
+      <ProductListing brandsData={brandsData} />
     </>
   );
 };

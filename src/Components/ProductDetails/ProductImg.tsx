@@ -51,9 +51,9 @@ const ProductImg: React.FC<_Props & { storeCode: string }> = ({
 
   useEffect(() => {
     setImage({
-      id: 0,
-      imageUrl: selectedColor.imageUrl,
-      altTag: selectedColor.altTag,
+      id: 1,
+      imageUrl: selectedColor.moreImages[0].imageUrl,
+      altTag: selectedColor.moreImages[0].altTag,
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedColor.attributeOptionId, product?.id]);

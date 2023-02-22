@@ -414,34 +414,6 @@ const CartLayout1 = (props: _Props) => {
                                   );
                                 },
                               )}
-                              {/* <div className='flex justify-between py-3'>
-                                  <div className='text-base'>
-                                    <div className='mb-3 flex'>
-                                      <img
-                                        src='images/logo-to-be-submitted.webp'
-                                        title=''
-                                        alt=''
-                                      />
-                                      <span className='font-semibold ml-3'>
-                                        Logo to be
-                                        <br />
-                                        submitted
-                                      </span>
-                                    </div>
-                                    <div>
-                                      <span className='font-semibold'>
-                                        Location:
-                                      </span>
-                                      <span>Right Sleeve</span>
-                                    </div>
-                                  </div>
-                                  <div className='text-base text-right'>
-                                    <div className='font-semibold'>
-                                      Logo Price
-                                    </div>
-                                    <div>First Logo Free</div>
-                                  </div>
-                                </div> */}
                             </div>
                           </div>
                           <div className='mt-2 lg:w-1/3 w-full'>

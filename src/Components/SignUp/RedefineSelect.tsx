@@ -24,6 +24,7 @@ const RedefineSelect: React.FC<_props> = ({
   value,
   placeHolder,
 }) => {
+  // console.log('state value from select ', options);
   return (
     <div className='w-full lg:w-1/2 px-3'>
       <label
@@ -41,9 +42,10 @@ const RedefineSelect: React.FC<_props> = ({
           value={value}
         >
           <>
-            <option value='' disabled selected>
+            {options.length === 0 ? <option>No State found</option> : ''}
+            {/* <option value='' disabled selected>
               {placeHolder}
-            </option>
+            </option> */}
             {options?.map((opt) => (
               <option
                 key={opt.id}

@@ -28,7 +28,7 @@ const Layout1FilterBar: React.FC<props> = ({
   setShowFilter,
 }) => {
   const storeLayout = useTypedSelector((state) => state.store.layout);
-
+  // console.log('adidas-collection.html showSortMenu', showSortMenu);
   return (
     <div className='relative z-20 border-t border-b border-gray-200'>
       <div className='relative py-4'>
@@ -86,12 +86,16 @@ const Layout1FilterBar: React.FC<props> = ({
               </>
             )}
             {properties.result_box.layout === 'unset' && (
-              <span>{totalCount} Results</span>
+              <span>
+                <b>Total :</b> {totalCount} Results
+              </span>
             )}
           </div>
           {properties.result_box.layout !== 'unset' && (
             <div className='flex lg:w-1/3 lg:justify-center w-1/2 items-center gap-2'>
-              <span>{totalCount} Results</span>
+              <span>
+                <b>Total :</b> {totalCount} Results
+              </span>
             </div>
           )}
 
@@ -107,7 +111,7 @@ const Layout1FilterBar: React.FC<props> = ({
                     className={`flex items-center cursor-pointer ${
                       storeLayout === _Store.type1 ? '' : 'gap-3'
                     }`}
-                    onClick={() => sortOpenHandler(true)}
+                    onClick={() => sortOpenHandler(showSortMenu ? false : true)}
                   >
                     <span>Sort </span>
                     <button

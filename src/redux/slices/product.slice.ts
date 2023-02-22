@@ -927,6 +927,16 @@ export const productSlice = createSlice({
     ) => {
       state.product.colors = action.payload.colors;
     },
+    updateLogoEditDetails: (
+      state,
+      action: {
+        payload: {
+          availableOptions: any;
+        };
+      },
+    ) => {
+      state.som_logos.availableOptions = action.payload.availableOptions;
+    },
   },
 });
 

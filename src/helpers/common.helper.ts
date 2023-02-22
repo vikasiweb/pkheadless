@@ -616,3 +616,45 @@ export const generateImageUrl = (
 export const capitalizeFirstLetter = (text: string) => {
   return text.charAt(0).toUpperCase() + text.slice(1);
 };
+
+var special = [
+  'zeroth',
+  'first',
+  'second',
+  'third',
+  'fourth',
+  'fifth',
+  'sixth',
+  'seventh',
+  'eighth',
+  'ninth',
+  'tenth',
+  'eleventh',
+  'twelvth',
+  'thirteenth',
+  'fourteenth',
+  'fifteenth',
+  'sixteenth',
+  'seventeenth',
+  'eighteenth',
+  'nineteenth',
+];
+var deca = [
+  'twent',
+  'thirt',
+  'fourt',
+  'fift',
+  'sixt',
+  'sevent',
+  'eight',
+  'ninet',
+];
+
+export const numberToOrdinalString = (n: number) => {
+  if (n < 20) return capitalizeFirstLetter(special[n]);
+  if (n % 10 === 0)
+    return capitalizeFirstLetter(deca[Math.floor(n / 10) - 2] + 'ieth');
+  return capitalizeFirstLetter(
+    deca[Math.floor(n / 10) - 2] + 'y-' + special[n % 10],
+  );
+};

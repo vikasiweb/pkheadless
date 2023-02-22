@@ -1,6 +1,362 @@
 const allClass = () => {
   return (
     <>
+    <main><div className="commondiv  " style="background: none;" id="div1"><div><section id="headbox" className="">
+    <div className="mx-auto" id="Description"><section className="relative pt-20 mainsection taillwind_call_to_action_2 lg:mb-40 bg-gray-300  pb-20" id="section3627" style="background-color: #003a70">
+<div className="relative container px-4 lg:pb-32 mx-auto" data-aos="none">
+<div className="max-w-3xl mx-auto text-center mb-12 lg:mb-20">
+<div className="text-box-h2" data-aos="none">
+<div>&nbsp;</div>
+</div>
+
+<div className="text-box-p mt-4" data-aos="none">
+<div style="text-align: center;">
+<h1><span style="color:#ffffff;"><strong><span style="font-size:28px;">Custom Order Support Starts Here. Book A Free Consultation.</span></strong></span></h1>
+</div>
+
+<div style="text-align: center;"><span style="color:#ffa400;"><span style="font-size:28px;"><strong>-</strong></span></span></div>
+
+<div style="text-align: center;"><span style="color:#ffffff;"><span style="font-size:14px;">Branded custom gear and apparel are a smart investment to boost your brand influence.&nbsp;We’ll help you with your order, every step o</span></span><span style="color:#ffffff;"><span style="font-size:14px;">f the way.</span></span></div>
+</div>
+<a className="btn-lg btn btn-default rounded-0" data-nofollow="N" href="https://outlook.office365.com/owa/calendar/CorporateGear@parsonskellogg.com/bookings/" target="" title="Book a Free Corporate Gear Consultation">Book Now </a></div>
+
+<div className="-mb-8 lg:-mb-64">
+<div className="flex flex-wrap -mx-4 -mb-8">
+<div className="w-full lg:w-1/3 px-4 mb-8" data-aos="none">
+<div className="bg-gray-50 text-center p-6 rounded">
+<div className="text-box-h4 mt-4">&nbsp;</div>
+
+<div className="text-box-p mt-4">
+<div>
+<div style="text-align: center;"><strong><span style="font-size:18px;">Expert Guidance</span></strong></div>
+
+<div>No matter how complex your order is, we are here with expert guidance for all your questions.</div>
+</div>
+</div>
+</div>
+</div>
+
+<div className="w-full lg:w-1/3 px-4 mb-8" data-aos="none">
+<div className="bg-gray-50 text-center p-6 rounded">
+<div className="text-box-h4 mt-4">&nbsp;</div>
+
+<div className="text-box-p mt-4">
+<div>
+<div style="text-align: center;">
+<div style="text-align: center;"><span style="font-size:18px;"><strong>Helpful Solutions</strong></span></div>
+
+<div style="text-align: center;">The right solution for your company, brand image, order type, quantities, and budget.</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div className="w-full lg:w-1/3 px-4 mb-8" data-aos="none">
+<div className="bg-gray-50 text-center p-6 rounded">
+<div className="text-box-h4 mt-4">&nbsp;</div>
+
+<div className="text-box-p mt-4">
+<div>
+<div style="text-align: center;">
+<div style="text-align: center;"><span style="font-size:18px;"><strong>No Fee, Always Free.</strong></span></div>
+
+<div style="text-align: center;">We understand ordering branded merchandise can get complex, and we never charge you for a consultation.</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</section></div></div><div className="commondiv  " style="background: none;" id="div2"><div><section id="headbox" className="">
+    <div className="mx-auto" id="Description"><div className="container px-4 mx-auto">
+<div className="max-w-2xl mx-auto">
+<div className="relative py-12 px-4 lg:px-24 mb-6 bg-gray-50 rounded-lg">
+<div className="text-box-h2">&nbsp;</div>
+
+<div className="text-box-p mt-4">
+<div>
+<div style="text-align: center;"><img alt="" src="https://media.corporategear.com/resources/filebrowser/CG-Lenovo-Review.png"></div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div><span style="font-size:18px;">We purchased custom embroidered Peter Millar company polos from Corporate Gear. The fit, comfort, and value for the level of quality and customer service are fantastic. We're very happy we chose Corporate Gear for our custom corporate clothing.</span></div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div><span style="font-size:24px;"><strong>- Lenovo</strong></span></div>
+</div>
+</div>
+</div>
+
+<div className="text-center text-box-p">
+<div>&nbsp;</div>
+</div>
+</div>
+</div>
+</div>
+</section></div></div><div className="commondiv  " style="background: rgb(0, 58, 112);" id="div3"><div><section id="headbox" className="relative pt-20 mainsection taillwind_call_to_action_2 lg:mb-40 bg-gray-300  pb-20" style="background: #003a70;">
+    <div id="Description" className=""><div className="relative container px-4 lg:pb-32 mx-auto" data-aos="none" style="padding-bottom: 8rem !important;position: relative !important;">
+<div className="max-w-3xl mx-auto text-center mb-12 lg:mb-20">
+<div className="text-box-h2" data-aos="none">&nbsp;</div>
+
+<div className="text-box-p mt-4" data-aos="none">
+<div style="text-align: center;">
+<h2><span style="color:#ffffff;"><span style="font-size:28px;"><strong>Consultation: What To Expect</strong></span></span></h2>
+
+<div><span style="color:#ffa400;"><span style="font-size:28px;"><strong>-</strong></span></span></div>
+</div>
+
+<div><span style="color:#ffffff;">We’ll start with the kind of products and customization you want, and then direct you to the best brands and inventory for your brand goals. But we don’t stop there. Your consultation with us is your time to have your unique questions addressed, and to help you create an order that checks all of the boxes. Your consultation can include help with any customization questions you may have.</span><br>
+&nbsp;</div>
+</div>
+</div>
+
+<div className="-mb-8 lg:-mb-64" style="margin-bottom: -16rem !important;">
+<div className="flex flex-wrap -mx-4 -mb-8" style="margin-bottom: -2rem !important;">
+<div className="w-full lg:w-1/3 px-4 mb-8" data-aos="none">
+<div className="bg-gray-50 text-center p-6 rounded">
+<div className="text-box-h4 mt-4">&nbsp;</div>
+
+<div className="text-box-p mt-4">
+<div style="text-align: center;"><span style="font-size:18px;"><strong><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Arial&quot;,sans-serif"><span style="color:black">Length: 15 Minutes</span></span></span></span></strong></span></div>
+
+<div style="text-align: center;"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Arial&quot;,sans-serif"><span style="color:black">Book a&nbsp;consultation for expert guidance on any step of your order or branding process. At Corporate Gear, we pride ourselves on being a unique in-house customization solution for every sized business. On your consultation call, you can get solutions for your custom order questions.</span></span></span></span></span></div>
+</div>
+</div>
+</div>
+
+<div className="w-full lg:w-1/3 px-4 mb-8" data-aos="none">
+<div className="bg-gray-50 text-center p-6 rounded">
+<div className="text-box-h4 mt-4">&nbsp;</div>
+
+<div className="text-box-p mt-4">
+<div style="text-align: center;"><span style="font-size:18px;"><strong>We're Here to Help</strong></span></div>
+
+<div style="text-align: center;"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Arial&quot;,sans-serif"><span style="color:black"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Arial&quot;,sans-serif"><span style="color:black">Whether this is your first time placing a customization order, or if you’re deciding on a different look, or brand campaign approach, Corporate Gear can assist you. Our team of expert merchandise consultants and account specialists have been working in the industry for many years.</span></span></span></span></span></span></span></span></span></span></div>
+</div>
+</div>
+</div>
+
+<div className="w-full lg:w-1/3 px-4 mb-8" data-aos="none">
+<div className="bg-gray-50 text-center p-6 rounded">
+<div className="text-box-h4 mt-4">&nbsp;</div>
+
+<div className="text-box-p mt-4">
+<div style="text-align: center;"><span style="font-size:18px;"><strong>Industry Expertise</strong></span></div>
+
+<div style="text-align: center;"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Arial&quot;,sans-serif"><span style="color:black"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Arial&quot;,sans-serif"><span style="color:black"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Arial&quot;,sans-serif"><span style="color:black">Because we have a depth of experience on our team, Corporate Gear has the ability to provide insights, feedback, and direction you may not receive from other providers. We aim to ensure your order is exactly the way you want it, and that it includes a high level of service along the way.</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section></div></div><div className="commondiv  " style="background: none;" id="div4"><div><section id="headbox" className="">
+    <div className="mx-auto" id="Description"><div className="container px-4 mx-auto">
+<div>
+<div className="text-title">&nbsp;</div>
+
+<div className="text-default-text mt-2">
+<div style="text-align: center;"><strong><span style="font-size:24px;"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Arial&quot;,sans-serif"><span style="color:black">Your consultation can include help with any customization questions, including:</span></span></span></span></span></strong></div>
+
+<div style="text-align: center;">&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+</div>
+</div>
+</div>
+</div>
+</section></div></div><div className="commondiv  " style="background: rgb(0, 58, 112);" id="div5"><div><section className="relative mainsection taillwind_call_to_action_2 lg:mb-40 pb-20">
+    <div className="relative container px-4 lg:pb-32 mx-auto">
+        <div className="max-w-3xl mx-auto text-center mb-12 lg:mb-20">
+            <div className="text-box-h2"></div>
+            <div className="text-box-p mt-4">
+                <div>&nbsp;</div>
+                <div>&nbsp;</div>
+                <div>&nbsp;</div>
+                <div></div>
+                <div id="Headline1" className="text-2xl md:text-3xl lg:text-title font-title text-color-title"></div>
+                <div id="Headline2" className="text-xl md:text-2xl lg:text-sub-title font-sub-title text-color-sub-title"></div>
+
+                <div className="text-default-text font-default-text text-color-default-text" id="Description"></div>
+                <div></div>
+                <div>&nbsp;</div>
+                <div>&nbsp;</div>
+                <div>&nbsp;</div>
+            </div>
+        </div>
+        <div className="-mb-8 lg:-mb-64">
+            <div className="flex flex-wrap -mx-4 -mb-8" id="numberdescriptionblock"><div className="w-full lg:w-1/3 px-4 mb-8"><div className="g-gray-50 text-center p-6 rounded" style="background: #ffffff;"><div className="inset-x-0 -mt-6 flex justify-center items-center w-12 h-12 mx-auto rounded-full bg-gray-500 text-gray-50 font-bold font-heading">1</div><div className="text-box-h4 mt-4">Turn Around Times</div><div className="text-box-h4 mt-4"></div></div></div><div className="w-full lg:w-1/3 px-4 mb-8"><div className="g-gray-50 text-center p-6 rounded" style="background: #ffffff;"><div className="inset-x-0 -mt-6 flex justify-center items-center w-12 h-12 mx-auto rounded-full bg-gray-500 text-gray-50 font-bold font-heading">2</div><div className="text-box-h4 mt-4">Shipping Timelines</div><div className="text-box-h4 mt-4"></div></div></div><div className="w-full lg:w-1/3 px-4 mb-8"><div className="g-gray-50 text-center p-6 rounded" style="background: #ffffff;"><div className="inset-x-0 -mt-6 flex justify-center items-center w-12 h-12 mx-auto rounded-full bg-gray-500 text-gray-50 font-bold font-heading">3</div><div className="text-box-h4 mt-4">Order Process</div><div className="text-box-h4 mt-4"></div></div></div><div className="w-full lg:w-1/3 px-4 mb-8"><div className="g-gray-50 text-center p-6 rounded" style="background: #ffffff;"><div className="inset-x-0 -mt-6 flex justify-center items-center w-12 h-12 mx-auto rounded-full bg-gray-500 text-gray-50 font-bold font-heading">4</div><div className="text-box-h4 mt-4">Peak Season</div><div className="text-box-h4 mt-4"></div></div></div><div className="w-full lg:w-1/3 px-4 mb-8"><div className="g-gray-50 text-center p-6 rounded" style="background: #ffffff;"><div className="inset-x-0 -mt-6 flex justify-center items-center w-12 h-12 mx-auto rounded-full bg-gray-500 text-gray-50 font-bold font-heading">5</div><div className="text-box-h4 mt-4">Decorating Options</div><div className="text-box-h4 mt-4"></div></div></div><div className="w-full lg:w-1/3 px-4 mb-8"><div className="g-gray-50 text-center p-6 rounded" style="background: #ffffff;"><div className="inset-x-0 -mt-6 flex justify-center items-center w-12 h-12 mx-auto rounded-full bg-gray-500 text-gray-50 font-bold font-heading">6</div><div className="text-box-h4 mt-4">Pricing and Minimums</div><div className="text-box-h4 mt-4"></div></div></div><div className="w-full lg:w-1/3 px-4 mb-8"><div className="g-gray-50 text-center p-6 rounded" style="background: #ffffff;"><div className="inset-x-0 -mt-6 flex justify-center items-center w-12 h-12 mx-auto rounded-full bg-gray-500 text-gray-50 font-bold font-heading">7</div><div className="text-box-h4 mt-4">Available Inventory</div><div className="text-box-h4 mt-4"></div></div></div><div className="w-full lg:w-1/3 px-4 mb-8"><div className="g-gray-50 text-center p-6 rounded" style="background: #ffffff;"><div className="inset-x-0 -mt-6 flex justify-center items-center w-12 h-12 mx-auto rounded-full bg-gray-500 text-gray-50 font-bold font-heading">8</div><div className="text-box-h4 mt-4">Changing My Order</div><div className="text-box-h4 mt-4"></div></div></div><div className="w-full lg:w-1/3 px-4 mb-8"><div className="g-gray-50 text-center p-6 rounded" style="background: #ffffff;"><div className="inset-x-0 -mt-6 flex justify-center items-center w-12 h-12 mx-auto rounded-full bg-gray-500 text-gray-50 font-bold font-heading">9</div><div className="text-box-h4 mt-4">Custom Requests</div><div className="text-box-h4 mt-4"></div></div></div></div>
+        </div>
+    </div>
+</section></div></div><div className="commondiv pt-5 " style="background: none;" id="div6"><div><section id="headbox" className="">
+    <div className="mx-auto" id="Description"><div className="text-default-text mt-2">
+<div style="text-align: center;"><span style="font-size:11.0pt"><span style="line-height:107%"><span style="font-family:&quot;Arial&quot;,sans-serif"><span style="color:black">However, this time is yours to use however you want. Your business may need to create a new logo, which we can do for you all in-house.</span></span></span></span></div>
+
+<div style="text-align: center;"><span style="font-size:11.0pt"><span style="line-height:107%"><span style="font-family:&quot;Arial&quot;,sans-serif"><span style="color:black">Or, you may be seeking guidance on the right type of embroidered promotional clothing for an upcoming event.</span></span></span></span></div>
+
+<div style="text-align: center;"><span style="font-size:11.0pt"><span style="line-height:107%"><span style="font-family:&quot;Arial&quot;,sans-serif"><span style="color:black">We provide you with answers, guidance, and solutions that are personalized to your unique brand goals.</span></span></span></span></div>
+</div>
+</div>
+</section></div></div><div className="commondiv  " style="background: none;" id="div7"><section className="mainsection container mx-auto mt-6 overflow-hidden"><div className="text-box-h2 mb-4" id="Title">Custom Branding Services</div><ul className="mt-4 w-full"><li className="mb-4 last:mb-0 hasarr clonnable border-b border-black undefined"><button className="w-full flex justify-between items-center text-left font-bold font-heading px-2 py-4 border-0 hover:border-0"><div className="text-defaule-text">Corporate Gear: Industry Leader</div><span className="material-icons-outlined ml-3 pointer-class">add_circle_outline</span></button><div className="text-defaule-text px-2 mt-2 pb-4 ac-description hidden"><div className="text-defaule-text mt-2"><div className="text-box-p px-2 mt-2 pb-4" x-show="open">
+<div>
+<p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Arial&quot;,sans-serif"><span style="color:black">ParsonsKellogg is our parent company, and we have forged a reputation as an up-and-coming, highly service-oriented business in the corporate customizing industry from this successful foundation. </span></span></span></span></span></p>
+
+<p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Arial&quot;,sans-serif"><span style="color:black">Corporate Gear seeks to support the customizing goals and budget for businesses both large and small. We have adopted the same service-centered strategy and values as our parent company in providing our customers with a wholly in-house, responsive experience. </span></span></span></span></span></p>
+
+<p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Arial&quot;,sans-serif"><span style="color:black">You’ll find that we deliver above-and-beyond your expectations: From our lead-times, to our customization results, Corporate Gear is not your average online customizing business. Instead, we have sought to develop key partnerships with highly-revered brands that consistently allow us to offer inventory and products that you may not find elsewhere. </span></span></span></span></span></p>
+
+<p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Arial&quot;,sans-serif"><span style="color:black">To that end, the key to our success is in our foundational value of co-branding with the best brands in the industry. From Corporate Patagonia, to custom Nike apparel, Peter Millar corporate golf shirts, or STIO customized jackets, Corporate Gear offers top name brands and customization merchandise for any brand type, and size. </span></span></span></span></span></p>
+
+<p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Arial&quot;,sans-serif"><span style="color:black">Corporate apparel embroidery and branded clothing are also highly specialized services. Not only do we ensure that the actual embroidery results look fantastic, but we also support your brand’s personal campaign goals with our consultation service, and sales team.&nbsp;&nbsp; </span></span></span></span></span></p>
+
+<p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Arial&quot;,sans-serif"><span style="color:black">You won’t be disappointed with the level of service, and the expert guidance we provide for your business. Our commitment to you is to deliver your order, going above and beyond what you have come to expect in an industry with so much throw-away customization. That’s why at times we make it a point to suggest certain products or brands for customization over others when we know what your goal is for your order. We don’t want you sitting with a surplus or worse, to not achieve the brand awareness impressions a branded apparel or branded gear order should. </span></span></span></span></span></p>
+</div>
+</div>
+</div></div></li><li className="mb-4 last:mb-0 hasarr clonnable border-b border-black undefined"><button className="w-full flex justify-between items-center text-left font-bold font-heading px-2 py-4 border-0 hover:border-0"><div className="text-defaule-text">Custom Corporate Gifts</div><span className="material-icons-outlined ml-3 pointer-class">add_circle_outline</span></button><div className="text-defaule-text px-2 mt-2 pb-4 ac-description hidden"><div className="text-defaule-text mt-2"><div className="text-box-p px-2 mt-2 pb-4" x-show="open">
+<div>
+<p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Arial&quot;,sans-serif"><span style="color:black">These days, custom corporate gifts are not the exception, but the norm. Therefore, you need a supplier that has the consistency in service, ability in managing any size order, and depth of inventory to handle all the corporate gifting orders you seek to execute in a year—and beyond! </span></span></span></span></span></p>
+
+<p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Arial&quot;,sans-serif"><span style="color:black">Our team of dedicated sales executives, coupled with our in-house customization experts work together to complete orders that need a lot of attention and a high level of detail. </span></span></span></span></span></p>
+
+<p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Arial&quot;,sans-serif"><span style="color:black">Corporate gifting can mean many things to your business, and is, again, unique to each business. Your budget, the complexity of your order, and your timeline, all require smart, competent support.&nbsp; You deserve a customizer who has your back, and is responsive through your order process. </span></span></span></span></span></p>
+
+<p style="margin:0in 0in 8pt">&nbsp;</p>
+
+<p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Arial&quot;,sans-serif"><span style="color:black">We provide consultation on any question and detail. We’ll help point you to the best brands for customizing men’s and women’s t-shirts for company corporate gifts that are sustainable and comfortable. Likewise, our merchandise experts can also suggest the right types of company gear, like custom engraved drink wear, coolers, or high-end tech. </span></span></span></span></span></p>
+
+<p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Arial&quot;,sans-serif"><span style="color:black">Corporate gifts can be curated with more than one logo, for corporate embroidery apparel, or with an array of branded apparel and gear, customized to be sent to specific businesses. It’s important to keep in mind that this is a very personalized experience. Many times, a short consultation helps clear up confusion on what custom company gifts are the best for your business. It’s also a good chance to learn more about all that we provide as a customizer with our in-house process. </span></span></span></span></span></p>
+
+<p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Arial&quot;,sans-serif"><span style="color:black">Your lead times, especially, are an important consideration. With a consultation, we can point you to comparable brands that have inventory and the lead time that fit your schedule, for the results you want. Because we have been in the industry for many years, we know how to creatively manage inventory, lead-time, and schedule challenges for your brand success. </span></span></span></span></span></p>
+</div>
+</div>
+</div></div></li><li className="mb-4 last:mb-0 hasarr clonnable border-b border-black undefined"><button className="w-full flex justify-between items-center text-left font-bold font-heading px-2 py-4 border-0 hover:border-0"><div className="text-defaule-text">Custom Promotional Items</div><span className="material-icons-outlined ml-3 pointer-class">add_circle_outline</span></button><div className="text-defaule-text px-2 mt-2 pb-4 ac-description hidden"><div className="text-defaule-text mt-2"><p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Arial&quot;,sans-serif"><span style="color:black">Custom promotional items are typically some of the most important, but cast aside pieces for which businesses invest. This is a multi-billion-dollar industry that can be the basis of strong brand awareness and leverage, or, unfortunately, a bad investment. </span></span></span></span></span></p>
+
+<p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Arial&quot;,sans-serif"><span style="color:black">Scheduling a merchandise and customization consultation with Corporate Gear can help you prevent your next branded promotional order from falling flat. After all, an investment in top- quality branded custom promotional items and promotional workwear is meant to pay off in elevating your brand recognition and brand loyalty. Within the industry, there are only a handful of customizers who are committed to offering the best in brand names for corporate promotional clothing and promotional gear. At Corporate Gear, you’ll experience the difference in the customization results, and service-level. </span></span></span></span></span></p>
+
+<p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Arial&quot;,sans-serif"><span style="color:black">We will take the time to listen to your brand and business goals. You may have a question about whether we can custom embroider your logo in more than one place on a product, or two separate logos or text. Or, you may not be sure which type of corporate apparel or promotional item would make the best Invesment for your next promotional event. Our team has many years of experience, knowing what types of orders to consider, and which may not be the best use of your company budget. </span></span></span></span></span></p>
+
+<p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Arial&quot;,sans-serif"><span style="color:black">Your next corporate event deserves the support and guidance of a team of experts. At Corporate Gear, we will provide you with feedback based on whether you’re creating a promotional shwag box or bag, to whether you want promotional corporate apparel to make your team stand out. </span></span></span></span></span></p>
+</div></div></li></ul></section></div><div className="commondiv  " style="background: none;" id="div8"><div><section id="headbox" className="">
+    <div className="mx-auto" id="Description"><div className="container mx-auto px-4">
+<div>
+<div className="text-center">
+<div className="mx-auto max-w-xs max-h-40 overflow-hidden mb-4"><img alt="Branded Merchandise: FAQ Help Center" className="w-full" data-aos="none" src="https://media.corporategear.com/resources/assets/library/Corporate-Gear-Verified-Business-Merchandise-Help-Center.png" title="Branded Merchandise: FAQ Help Center"></div>
+
+<div className="text-small-title">Custom Order Support Starts Here</div>
+
+<div className="text-title">Branded Merchandise: FAQ Help Center</div>
+
+<div className="text-default-text mt-2">
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div style="text-align: center;"><span style="font-size:18px;">Expert Guidance / Helpful Solutions</span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section></div></div><div className="commondiv pt-5 " style="background: none;" id="div9"><div><section className="relative tailwind-three-column-with-side-text-img mainsection">
+  <div className="container px-4 mx-auto">
+    <div className="flex flex-wrap -mx-3 -mt-6">
+      <div className="w-full mt-6 flex lg:w-1/2 px-3 md:w-1/2" id="sectionLeft"><div classname="flex"><a title="" href="" classname="hrefurl no-underline"><img classname="w-full" src="https://redefinecommerce.blob.core.windows.net/rdc/1/store/4/images/cg-faq-1.webp" alt="" title=""><div classname="text-center w-full bg-gray-50"></div></a></div></div>
+      <div className="w-full mt-6 flex hidden" id="sectionCenter">
+      </div>
+      <div className="w-full mt-6 flex lg:w-1/2 px-3 md:w-1/2" id="sectionRight"><div classname="flex"><a title="" href="" classname="hrefurl no-underline"><img classname="w-full" src="https://redefinecommerce.blob.core.windows.net/rdc/1/store/4/images/cg-decoration-guide_1.webp" alt="" title=""><div classname="text-center w-full bg-gray-50"></div></a></div></div>
+    </div>
+  </div>
+</section></div></div><div className="commondiv pt-5 " style="background: none;" id="div10"><div><section className="relative tailwind-three-column-with-side-text-img mainsection">
+  <div className="container px-4 mx-auto">
+    <div className="flex flex-wrap -mx-3 -mt-6">
+      <div className="w-full mt-6 flex lg:w-1/2 px-3 md:w-1/2" id="sectionLeft"><div classname="p-4 lg:p-8 flex w-full items-center"><div classname="w-full"><div classname="text-sub-title"></div><div classname="text-default-text mt-2"><div className="mb-4 text-box-p mt-4 leading-loose" data-aos="none">
+<div>
+<div><span style="font-size:18px;">FAQ Help Center</span></div>
+
+<div>
+<div>&nbsp;</div>
+
+<div><strong><span style="font-size:24px;">Most Frequently Asked Questions</span></strong></div>
+
+<div>&nbsp;</div>
+</div>
+
+<div>Find answers to the most frequently asked questions related to ordering custom branded company merchandise, corporate gifts and logo gear.</div>
+</div>
+</div>
+</div></div></div></div>
+      <div className="w-full mt-6 flex hidden" id="sectionCenter">
+      </div>
+      <div className="w-full mt-6 flex lg:w-1/2 px-3 md:w-1/2" id="sectionRight"><div classname="p-4 lg:p-8 flex w-full items-center"><div classname="w-full"><div classname="text-sub-title"></div><div classname="text-default-text mt-2"><div className="mb-4 text-box-p mt-4 leading-loose" data-aos="none">
+<div>
+<div><span style="font-size:18px;">How to Choose Your Decoration Method</span></div>
+
+<div>
+<div><strong><span style="font-size:24px;">Decoration Process 101</span></strong></div>
+</div>
+
+<div>We&nbsp;know our merchandise, fabrics, and customizing process. After your online order is placed, our support team will work with you to determine the best custom decoration method for&nbsp;your order.</div>
+</div>
+</div>
+</div></div></div></div>
+    </div>
+  </div>
+</section></div></div><div className="commondiv  " style="background: none;" id="div11"><div><section id="headbox" className="">
+    <div className="mx-auto" id="Description"><div className="container px-4 mx-auto"><a data-nofollow="N" href="javascript:void(0);" target="" title=""><img alt="" className="max-w-full mx-auto" src="https://media.corporategear.com/resources/assets/library/Co-branded Corporate Apparel by Corporate Gear.jpg" title=""> </a></div>
+</div>
+</section></div></div><div className="commondiv pb-5 " style="background: none;" id="div12"><div><section id="headbox" className="">
+    <div className="mx-auto" id="Description"><div className="w-full max-w-3xl mx-auto">
+<div className="text-lg md:text-xl lg:text-small-title font-small-title text-color-small-title text-color-small-title text-center mb-8">Our approach as an extension of your brand is to help maintain and build your brand equity with the right partners in the corporate marketplace.</div>
+
+<div className="flex flex-wrap justify-center items-center gap-y-5">
+<div className="w-1/2 md:w-1/3 text-center order-2 md:order-1">
+<div className="bg-chat-call-us w-20 h-20 mx-auto mb-2 rounded-full flex items-center justify-center"><span className="material-icons-outlined text-4xl">chat</span></div>
+
+<div className="text-base font-semibold uppercase">Chat</div>
+</div>
+
+<div className="w-full md:w-1/3 text-center order-1 md:order-2">
+<div className="text-base lg:text-2xl font-semibold uppercase">Contact Us</div>
+</div>
+
+<div className="w-1/2 md:w-1/3 text-center order-3 md:order-3">
+<div className="bg-chat-call-us w-20 h-20 mx-auto mb-2 rounded-full flex items-center justify-center"><span className="material-icons text-4xl">phone</span></div>
+
+<div className="text-base font-semibold uppercase">Call</div>
+</div>
+</div>
+</div>
+</div>
+</section></div></div></main>
       <div className='absolute top-1/2 -translate-y-1/2 left-4 z-10 flex items-center'>
         <button className='bg-light-gray bg-opacity-90 flex justify-center items-center w-10 h-10 rounded-md shadow-md focus:outline-none'>
           <svg

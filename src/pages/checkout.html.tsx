@@ -1,5 +1,7 @@
+import { CustomizeLater } from '@constants/global.constant';
 import { FetchCartDetails } from '@services/cart.service';
 import { CartProducts } from '@type/APIs/cart.res';
+import config from 'api.config';
 import ForgotModal from 'appComponents/modals/ForgotModal';
 import Image from 'appComponents/reUsable/Image';
 import Price from 'appComponents/reUsable/Price';
@@ -9,8 +11,10 @@ import CartSummary from 'Components/CartSummary/CartSummary';
 import PaymentOption from 'Components/Checkout/components/PaymentOption';
 import { seoTags as seoDetails } from 'constants/seo.constant';
 import { Formik, FormikProps } from 'formik';
+import { useTypedSelector } from 'hooks';
 import _ from 'lodash';
 import { GetServerSideProps, GetServerSidePropsResult, NextPage } from 'next';
+import { _Store } from 'page.config';
 import { createRef, useState } from 'react';
 import CheckoutController from '../Components/Checkout/CheckoutController';
 import AddressPopupLayout1 from '../Components/Checkout/components/AdressPopup/AdressPopupLayout1';
@@ -60,6 +64,7 @@ const Checkout: NextPage<{ cartDetails: CartProducts | null }> = (props) => {
   const shipping = createRef();
   const billing = createRef();
   const [showReviewOrder, setShowReviewOrder] = useState(false);
+  const storeLayout = useTypedSelector((state) => state.store.layout);
 
   const handleReviewOrder = async () => {
     if (!isLoggedIn) {
@@ -69,12 +74,18 @@ const Checkout: NextPage<{ cartDetails: CartProducts | null }> = (props) => {
       if (!useShippingAddress) {
         await billingForm.submitForm();
       }
+      console.log(
+        form.dirty,
+        form.isValid,
+        billingForm.dirty,
+        billingForm.isValid,
+      );
       if (
         form.dirty &&
         form.isValid &&
-        billingForm.dirty &&
-        billingForm.isValid
+        (useShippingAddress || (billingForm.dirty && billingForm.isValid))
       ) {
+        alert();
         if (!checkPayment()) {
           return;
         }
@@ -565,22 +576,83 @@ const Checkout: NextPage<{ cartDetails: CartProducts | null }> = (props) => {
                             </div>
                           </div>
                         </div>
-                        <div className='flex justify-start items-center mb-3'>
-                          <div>
-                            <span className='material-icons text-[60px] mr-3'>
-                              support_agent
-                            </span>
-                          </div>
-                          <div>
-                            <div className='text-lg font-semibold'>
-                              Customize Later
-                            </div>
-                            <div className='text-base'>
-                              A Gear Expert will contact you to discuss the
-                              customization of this product.
-                            </div>
-                          </div>
-                        </div>
+                        {cart.shoppingCartLogoPersonViewModels.map(
+                          (item: any, index: number) => {
+                            return item.logoName === 'Customize Later' &&
+                              storeLayout === _Store.type1 ? (
+                              <div className='flex justify-start items-center mt-3'>
+                                <div>
+                                  <span className='material-icons text-[60px] mr-3'>
+                                    support_agent
+                                  </span>
+                                </div>
+                                <div>
+                                  <div className='text-lg font-semibold'>
+                                    Customize Later
+                                  </div>
+                                  <div className='text-base'>
+                                    {CustomizeLater}
+                                  </div>
+                                </div>
+                              </div>
+                            ) : (
+                              <div
+                                key={`${item}-${index}`}
+                                className='w-full flex justify-between py-3'
+                              >
+                                <div className='text-base'>
+                                  <div className='mb-3 flex'>
+                                    {item.logoImagePath === '' ? (
+                                      <img
+                                        className='w-14 h-12'
+                                        src='/images/logo-to-be-submitted.webp'
+                                        title=''
+                                        alt={item.logoImagePath}
+                                      />
+                                    ) : (
+                                      <img
+                                        className='w-14 h-12'
+                                        src={`${config.mediaBaseUrl}${item.logoImagePath}`}
+                                        title=''
+                                        alt={item.logoImagePath}
+                                      />
+                                    )}
+
+                                    {item.logoName === 'Add Logo Later' ? (
+                                      <span className='font-semibold ml-3'>
+                                        Logo to be
+                                        <br />
+                                        submitted
+                                      </span>
+                                    ) : (
+                                      <span className='font-semibold ml-3'>
+                                        Logo
+                                        <br />
+                                        submitted
+                                      </span>
+                                    )}
+                                  </div>
+                                  <div>
+                                    <span className='font-semibold mr-1'>
+                                      Location:
+                                    </span>
+                                    <span>{item.logoLocation}</span>
+                                  </div>
+                                </div>
+                                <div className='text-base text-right'>
+                                  <div className='font-semibold'>
+                                    Logo Price
+                                  </div>
+                                  <div>
+                                    {index === 0 && item.logoPrice === 0
+                                      ? 'First Logo Free'
+                                      : `$${item.logoPrice}`}
+                                  </div>
+                                </div>
+                              </div>
+                            );
+                          },
+                        )}
                       </div>
                     </div>
                   </li>

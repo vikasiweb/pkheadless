@@ -8,10 +8,12 @@ import {
   Logo,
   MenuIcon,
   MyCartIcon,
-  WishListIcon,
+  WishListIcon
 } from '../Icons';
 
+import CartController from 'Controllers/CartController';
 import { _MenuItems } from 'show.type';
+import NotificationBar from '../NotificationBar';
 import SearchBar from './Ecommerce_SearchBar';
 import MenuItems from './Menu/Ecommerce_MenuItems';
 
@@ -28,6 +30,7 @@ const Ecommerce_Header: React.FC<_props> = ({
   logoUrl,
   menuItems,
 }) => {
+  CartController();
   const { store_setAppView } = useActions();
   const { width } = useWindowDimensions();
 
@@ -55,6 +58,7 @@ const Ecommerce_Header: React.FC<_props> = ({
   ) {
     return (
       <div className='bg-white sticky top-0 z-40 shadow-[0_0px_5px_rgba(0,0,0,0.12)]'>
+        <NotificationBar />
         <div className='bg-white'>
           {isMobileView && (
             <MenuItems

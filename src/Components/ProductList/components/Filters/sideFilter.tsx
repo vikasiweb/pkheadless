@@ -2,7 +2,7 @@ import {
   Accordion,
   AccordionDetails,
   AccordionSummary,
-  Link
+  Link,
 } from '@mui/material';
 import { FilterChangeHandler, FilterType } from '@type/productList.type';
 import { capitalizeFirstLetter } from 'helpers/common.helper';
@@ -134,7 +134,7 @@ const SideFilter = ({
                                   <Link
                                     key={option.name}
                                     id={option.name}
-                                    className='flex items-center text-black font-bold'
+                                    className='flex items-center !text-black font-bold !no-underline'
                                     href={`${option.sename}.html`}
                                   >
                                     <span className='material-icons-outlined'>
@@ -150,12 +150,13 @@ const SideFilter = ({
                                       {option.subrows?.map((subrow) => (
                                         <li
                                           key={subrow.id}
-                                          className='flex items-center text-black'
+                                          className='flex items-center !text-black !no-underline'
                                         >
                                           {' '}
                                           <Link
                                             key={subrow.name}
                                             href={`${subrow.sename}.html`}
+                                            className='!text-black !no-underline'
                                           >
                                             <span className='material-icons-outlined'>
                                               {' '}
@@ -189,21 +190,23 @@ const SideFilter = ({
                                     className='h-[13px] w-[13px] border-2 border-black rounded text-[#003a70] focus:ring-[#003a70] focus-visible:border-0'
                                   />
                                   {option.label === 'Size' ||
-                                      option.label === 'Price Range' ? (
-                                        <label
-                                          htmlFor={`${option.name}-${ind}`}
-                                          className='text-black'
-                                        >
-                                          {option.name}
-                                        </label>
-                                      ) : (
-                                        <label
-                                          htmlFor={`${option.name}-${ind}`}
-                                          className='text-black'
-                                        >
-                                          {capitalizeFirstLetter(option.name)} ({option?.productCount})
-                                        </label>
-                                      )}
+                                  option.label === 'Brand' ||
+                                  option.label === 'Price Range' ? (
+                                    <label
+                                      htmlFor={`${option.name}-${ind}`}
+                                      className='text-black'
+                                    >
+                                      {option.name}
+                                    </label>
+                                  ) : (
+                                    <label
+                                      htmlFor={`${option.name}-${ind}`}
+                                      className='text-black'
+                                    >
+                                      {capitalizeFirstLetter(option.name)} (
+                                      {option?.productCount})
+                                    </label>
+                                  )}
                                   {/* <label
                                     htmlFor={`${option.name}-${ind}`}
                                     className='text-black'

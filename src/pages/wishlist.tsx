@@ -1,6 +1,7 @@
 import { __Cookie } from '@constants/global.constant';
 import config from 'api.config';
 import Image from 'appComponents/reUsable/Image';
+import Price from 'appComponents/reUsable/Price';
 import { WishlistType } from 'definations/wishlist.type';
 import { extractCookies } from 'helpers/common.helper';
 import { useActions, useTypedSelector } from 'hooks';
@@ -39,7 +40,7 @@ const Wishlist = () => {
         <ul role='list' className='flex flex-wrap -mx-3 gap-y-6'>
           {wishlist.map((list, index) => (
             <li key={index} className='w-full md:w-1/2 lg:w-1/4 px-3 mb-2'>
-              <div className='group relative border border-gray-300 p-3 text-center'>
+              <div className='group relative border border-gray-300 p-3 text-center h-full'>
                 <Link
                   key={list.productId}
                   href={`${origin}/${list.seName}.html?v=product-detail&altview=1`}
@@ -67,7 +68,16 @@ const Wishlist = () => {
                       <a>{list.productName}</a>
                     </Link>
                   </h3>
-                  <div className='text-default-text mt-2'>${list.price}</div>
+                  <div className='text-default-text mt-2'>
+                    {/* ${list.price} */}
+                    <Price
+                      value={undefined}
+                      prices={{
+                        msrp: list.price,
+                        salePrice: list.price,
+                      }}
+                    />
+                  </div>
                   <div className='flex justify-center items-center gap-2 mt-2'>
                     <div className='btn btn-secondary !py-1 text-center'>
                       <Link

@@ -50,6 +50,8 @@ const RedefineStateNcountries: React.FC<_props> = ({
       .then(getStatesList);
   }, []);
 
+  // console.log('from input ', stateContries);
+
   return (
     <>
       {stateContries.country !== null && (

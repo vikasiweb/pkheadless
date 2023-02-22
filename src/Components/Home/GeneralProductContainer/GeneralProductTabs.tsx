@@ -1,5 +1,5 @@
 // ** React Imports
-import { useTypedSelector } from 'hooks';
+import { useActions, useTypedSelector } from 'hooks';
 import React, { useEffect, useState } from 'react';
 
 // ** MUI Imports
@@ -8,8 +8,8 @@ import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
-import MuiTab from '@mui/material/Tab';
 import { styled } from '@mui/material/styles';
+import MuiTab from '@mui/material/Tab';
 import { FetchDataByBrand } from '@services/brand.service';
 import { _SelectedBrands } from '@type/APIs/storeDetails.res';
 import { GetlAllProductList } from '@type/productList.type';
@@ -34,24 +34,12 @@ const ProductsInfoTabs: React.FC<_props> = ({ dataArr }) => {
   const [value, setValue] = useState(
     dataArr?.featuredproducts_selected_brands?.value[0]?.value,
   );
-  const initialData = [
-    {
-      imageUrl: '',
-      imap: '',
-      getProductImageOptionList: [],
-      productId: 0,
-      productName: '',
-      productSEName: '',
-      productDisplayOrder: 0,
-      ourCost: 0,
-      msrp: 0,
-      salePrice: 0,
-    },
-  ];
 
-  const [brandsData, setBrandsData] =
-    useState<GetlAllProductList[]>(initialData);
+  const [brandsData, setBrandsData] = useState<GetlAllProductList[] | []>([]);
+  const [loading, setLoading] = useState<boolean>(false);
+  const { storeData } = useActions();
   const storeId = useTypedSelector((state) => state.store.id);
+  const cacheData = useTypedSelector((state) => state.cache.cacheData);
 
   const fetchBrandData = async () => {
     let body = {
@@ -61,12 +49,21 @@ const ProductsInfoTabs: React.FC<_props> = ({ dataArr }) => {
       tagName: 'featured',
     };
     const data = await FetchDataByBrand(body);
+    storeData({
+      [value]: data?.data,
+    });
     setBrandsData(data?.data);
+    setLoading(false);
   };
 
   // Fetching products by brand
   useEffect(() => {
-    fetchBrandData();
+    if (value in cacheData) {
+      setLoading(false);
+    } else {
+      setLoading(true);
+      fetchBrandData();
+    }
   }, [value]);
 
   const handleChange = (event: React.SyntheticEvent, newValue: string) => {
@@ -104,9 +101,16 @@ const ProductsInfoTabs: React.FC<_props> = ({ dataArr }) => {
       <Box sx={{ marginTop: 0 }}>
         {dataArr?.featuredproducts_selected_brands.value.map((brand, index) => {
           return (
-            <TabPanel sx={{ p: 0 }} value={brand.value} key={index}>
-              <BrandProductListing brandsData={brandsData} />
-            </TabPanel>
+            <>
+              <TabPanel sx={{ p: 0 }} value={brand.value} key={index}>
+                <BrandProductListing
+                  brandsData={brandsData}
+                  loading={loading}
+                  recentBrand={value}
+                  totalBrands={dataArr?.featuredproducts_selected_brands.value}
+                />
+              </TabPanel>
+            </>
           );
         })}
       </Box>

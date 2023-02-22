@@ -93,64 +93,46 @@ const BreadCrumb: React.FC = () => {
     storeLayout === _Store.type16
   ) {
     return (
-      <div id='' className='px-2 lg:px-0'>
+      <div id='' className='my-3 px-2 lg:px-0'>
         <div className='container mx-auto'>
-          <div className='flex flex-wrap justify-between py-1 border-b border-gray-200'>
+          <div className='flex flex-wrap justify-between py-1 border-b border-b-gray-300'>
             <nav
-              className='flex flex-wrap items-center text-sm'
+              className='flex flex-wrap items-center text-sm py-2 lg:py-0'
               aria-label='Breadcrumb'
             >
               {pageType.type === 'product' && (
-                <div className='mr-4' onClick={() => router.push('/')}>
+                <div
+                  className='hidden text-anchor hover:text-anchor-hover cursor-pointer lg:inline-block mr-4'
+                  onClick={() => router.push('/')}
+                >
                   &lt;&lt; Back
                 </div>
               )}
-              <ol className='inline-flex items-center space-x-1 md:space-x-3'>
-                {breadCrumbs.map((item, index) => (
-                  <li key={index} aria-current='page'>
-                    <Link
-                      href={item.url}
-                      className='inline-flex items-center font-medium text-gray-700 hover:text-gray-900'
-                    >
-                      <a className='inline-flex items-center font-medium text-gray-700 hover:text-gray-900'>
+              <ol className='inline-flex items-center space-x-1 md:space-x-2'>
+                {breadCrumbs.map((item, index, arr) => (
+                  <li
+                    key={index}
+                    className='inline-flex items-center '
+                    aria-current='page'
+                  >
+                    <Link href={item.url} className='inline-flex items-center'>
+                      <a className='inline-flex items-center text-[13px]'>
                         <div className='flex items-center'>
                           {index > 0 && (
-                            <svg
-                              className='w-2 h-4 text-gray-400'
-                              fill='currentColor'
-                              viewBox='0 0 1.5 14'
-                            >
-                              <line
-                                id='Line_2'
-                                data-name='Line 3'
-                                y2='14'
-                                transform='translate(0.75)'
-                                fill='none'
-                                stroke='currentColor'
-                                strokeWidth='1.5'
-                              ></line>
-                            </svg>
-                          )}
-                          {item.name == 'Home' ? (
-                            <>
-                              <span className='material-symbols-outlined ml-1 text-xs  md:ml-2'>
-                                home
-                              </span>
-                              <span className='ml-1 text-sm md:ml-2 !text-gray-700'>
-                                {item.name}
-                              </span>
-                            </>
-                          ) : (
-                            <span
-                              className={`ml-1 text-sm md:ml-2 ${
-                                index === breadCrumbs.length - 1
-                                  ? 'text-anchor'
-                                  : '!text-gray-700'
-                              } `}
-                            >
-                              {item.name}
+                            <span className='text-anchor text-[13px]'>
+                              &gt;
                             </span>
                           )}
+
+                          <span
+                            className={`ml-1 text-[13px] text-anchor md:ml-2 ${
+                              index === arr.length - 1
+                                ? ''
+                                : 'hover:text-anchor-hover'
+                            }`}
+                          >
+                            {item.name}
+                          </span>
                         </div>
                       </a>
                     </Link>
@@ -162,7 +144,7 @@ const BreadCrumb: React.FC = () => {
               <div className='text-center w-auto product-brand-logo'>
                 <ImageComp
                   src={product.brand?.url || ''}
-                  className='h-16 w-auto inline-block'
+                  className='inline-block'
                   // height={100}
                   // width={100}
                   alt=''
@@ -269,11 +251,11 @@ const BreadCrumb: React.FC = () => {
                       <span className='inline-flex items-center font-medium text-gray-700 hover:text-gray-900'>
                         <div className='flex items-center'>
                           {index > 0 && (
-                            <span className='material-icons-outlined text-sm mr-1 md:mr-2'>
-                              east
+                            <span className='text-anchor text-[13px]'>
+                              &gt;
                             </span>
                           )}
-                          <a className='text-secondary hover:text'>
+                          <a className='ml-1 text-[13px] text-anchor md:ml-2'>
                             {item.name}
                           </a>
                         </div>

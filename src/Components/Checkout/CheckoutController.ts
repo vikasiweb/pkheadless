@@ -53,6 +53,7 @@ const CheckoutController = () => {
     cart_userUpdate,
     updateCustomer,
     logInUser: logInUserFn,
+    logoutClearCart,
     customerCreditBalanceUpdate,
   } = useActions();
   const employeeData = useTypedSelector((state) => state.employee);
@@ -315,6 +316,7 @@ const CheckoutController = () => {
       orderModel,
     };
     try {
+      logoutClearCart();
       deleteCookie(__Cookie.tempCustomerId);
       const res = await PlaceOrderService(order);
       router.push(`${paths.THANK_YOU}?orderNumber=${res.id}`);

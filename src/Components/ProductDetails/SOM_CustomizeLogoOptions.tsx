@@ -1,14 +1,44 @@
 import { FetchLogoLocationByProductId } from '@services/product.service';
+import { _CI_ShoppingCartLogoPersonViewModel } from '@type/APIs/cart.res';
 import { _LogoLocationDetail } from '@type/APIs/productDetail.res';
 import { FieldArray, Form, Formik } from 'formik';
+import { generateImageUrl, numberToOrdinalString } from 'helpers/common.helper';
 import { useActions, useTypedSelector } from 'hooks';
-import { IndexLabels, logoPositions } from 'mock/startModal.mock';
+import { logoPositions } from 'mock/startModal.mock';
 import React, { useEffect, useState } from 'react';
 import NextLogoButton from './NextLogoButton';
 import SOM_LogoOption from './SOM_LogoOption';
 
-const SOM_CustomizeLogoOptions: React.FC = () => {
-  const { product_updateLogoDetails } = useActions();
+export type LogoStatus = string;
+export type SelectedLocation = {
+  label: string;
+  value: string;
+  image: {
+    url: string;
+    alt: string;
+  };
+  show: boolean;
+  price: number;
+  cost: number;
+} | null;
+export type FileToUpload = {
+  name: string;
+  type: string;
+  previewURL: string;
+} | null;
+
+export type LogoDetails = {
+  logoStatus: LogoStatus;
+  selectedLocation: SelectedLocation;
+  fileToUpload: FileToUpload;
+};
+
+export type logoDetailsAr = Array<LogoDetails>;
+
+const SOM_CustomizeLogoOptions: React.FC<{
+  editDetails: _CI_ShoppingCartLogoPersonViewModel[] | undefined;
+}> = ({ editDetails }) => {
+  const { product_updateLogoDetails, updateLogoEditDetails } = useActions();
   const [nowOrLater, setNowOrLater] = useState<'later' | 'now'>('later');
   const [firstLogoFree, setFirstLogoFree] = useState<Boolean>(true);
   const { currency } = useTypedSelector((state) => state.store);
@@ -16,7 +46,9 @@ const SOM_CustomizeLogoOptions: React.FC = () => {
     [],
   );
   const id = useTypedSelector((state) => state.product.product.id);
-
+  const [logoEditDetails, setLogoEditDetails] =
+    useState<logoDetailsAr | null>();
+  const [initialValues, setInitialValues] = useState(['']);
   useEffect(() => {
     if (id) {
       FetchLogoLocationByProductId({ productId: id }).then((res) => {
@@ -29,6 +61,68 @@ const SOM_CustomizeLogoOptions: React.FC = () => {
       });
     }
   }, []);
+
+  useEffect(() => {
+    if (editDetails && logoLocation) {
+      let isLater = false;
+      const details = editDetails.map((res) => {
+        let logoStatus: LogoStatus = '';
+        let fileToUpload: FileToUpload = null;
+        if (res.logoName === 'Customize Later') {
+          setNowOrLater('later');
+          isLater = true;
+        } else if (res.logoName === 'Add Logo Later') {
+          logoStatus = 'later';
+          setNowOrLater('now');
+        } else {
+          logoStatus = 'submitted';
+          setNowOrLater('now');
+          // eslint-disable-next-line no-useless-escape
+          const filename = res.logoImagePath.replace(/^.*[\\\/]/, '');
+          fileToUpload = {
+            name: filename,
+            type: filename.split('.').pop() as string,
+            previewURL: generateImageUrl(res.logoImagePath, false) as string,
+          };
+        }
+
+        const selectedLocation = {
+          label: res.logoLocation || '',
+          value: res.logoLocation || '',
+          image: {
+            url: res.logoPositionImage || '',
+            alt: res.logoLocation || '',
+          },
+          show: true,
+          price: res.logoPrice,
+          cost: res.logoPrice,
+        };
+
+        return {
+          logoStatus,
+          fileToUpload,
+          selectedLocation,
+        };
+      });
+      if (!isLater) {
+        setInitialValues(new Array(details.length).fill(''));
+        setLogoEditDetails(details);
+        logoNowOrLaterHandler('now');
+        // updateLogoEditDetails({
+        //   availableOptions: logoLocation?.map((logo) => ({
+        //     image: {
+        //       url: logo.image,
+        //       alt: logo.image,
+        //     },
+        //     label: logo.name,
+        //     value: logo.name,
+        //     price: logo.price,
+        //     cost: logo.cost,
+        //   })),
+        // });
+      }
+    }
+  }, [editDetails, logoLocation]);
 
   const showPrice = (price: 'FREE' | number) => {
     if (price === 'FREE') return `FREE`;
@@ -105,7 +199,7 @@ const SOM_CustomizeLogoOptions: React.FC = () => {
           <div className=''>
             <Formik
               initialValues={{
-                logos: [''],
+                logos: initialValues,
               }}
               onSubmit={() => {}}
             >
@@ -117,18 +211,12 @@ const SOM_CustomizeLogoOptions: React.FC = () => {
                       render={(arrayHelpers) => {
                         return (
                           <>
-                            {values.logos?.map((val, index) => (
+                            {values.logos?.map((_, index) => (
                               <SOM_LogoOption
                                 key={index}
                                 index={index}
                                 textIndex={values.logos.length}
-                                price={
-                                  firstLogoFree
-                                    ? IndexLabels[index].price
-                                    : index === 0
-                                    ? IndexLabels[index + 1].price
-                                    : IndexLabels[index].price
-                                }
+                                price={firstLogoFree ? 'FREE' : 6}
                                 onRemove={() => {
                                   arrayHelpers.remove(index);
                                   product_updateLogoDetails({
@@ -136,21 +224,36 @@ const SOM_CustomizeLogoOptions: React.FC = () => {
                                     allow: true,
                                   });
                                 }}
-                                title={`${IndexLabels[index].label} Logo (${
+                                title={`${numberToOrdinalString(
+                                  values.logos.length,
+                                )} Logo (${
                                   firstLogoFree
-                                    ? showPrice(IndexLabels[index].price)
+                                    ? 'FREE'
                                     : index === 0
-                                    ? showPrice(IndexLabels[index + 1].price)
-                                    : showPrice(IndexLabels[index].price)
+                                    ? showPrice(6)
+                                    : showPrice(6)
                                 })`}
                                 id={`${index}-id`}
                                 name={`${index}-name`}
+                                editDetails={
+                                  logoEditDetails
+                                    ? logoEditDetails[index]
+                                    : null
+                                }
                               />
                             ))}
-                            <NextLogoButton
-                              cIndex={IndexLabels[values.logos.length]}
-                              arrayHelpers={arrayHelpers}
-                            />
+                            {logoLocation.length > values.logos.length && (
+                              <NextLogoButton
+                                cIndex={{
+                                  label: numberToOrdinalString(
+                                    values.logos.length + 1,
+                                  ),
+                                  value: values.logos.length + 1,
+                                  price: values.logos.length === 1 ? 'FREE' : 6,
+                                }}
+                                arrayHelpers={arrayHelpers}
+                              />
+                            )}
                           </>
                         );
                       }}
@@ -165,5 +268,4 @@ const SOM_CustomizeLogoOptions: React.FC = () => {
     </div>
   );
 };
-
 export default SOM_CustomizeLogoOptions;

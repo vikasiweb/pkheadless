@@ -1,23 +1,12 @@
 import { GetlAllProductList } from '@type/productList.type';
-import FeaturedSkeleton from 'Components/Loading/Skeleton';
-import { useTypedSelector } from 'hooks';
 import React from 'react';
-import 'react-loading-skeleton/dist/skeleton.css';
 import BrandProduct from './BrandProduct';
 
 interface _props {
   brandsData: GetlAllProductList[];
-  loading: boolean;
-  recentBrand: string;
-  totalBrands: { value: number | string; label: string }[];
 }
 
-const BrandProductListing: React.FC<_props> = ({
-  brandsData,
-  loading,
-  recentBrand,
-  totalBrands,
-}) => {
+const ProductListing: React.FC<_props> = ({ brandsData }) => {
   const colorChangeHandler = (
     productId: number | undefined,
     seName: string | undefined,
@@ -46,7 +35,6 @@ const BrandProductListing: React.FC<_props> = ({
     }
     localStorage.setItem('selectedProducts', JSON.stringify(selectedProducts));
   };
-  const cacheData = useTypedSelector((state) => state.cache.cacheData);
 
   return (
     <>
@@ -59,25 +47,15 @@ const BrandProductListing: React.FC<_props> = ({
                 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8'
               }
             >
-              {cacheData[recentBrand] && !loading
-                ? cacheData[recentBrand].map(
-                    (product: GetlAllProductList, index: number) => (
-                      <BrandProduct
-                        key={index}
-                        product={product}
-                        colorChangeHandler={colorChangeHandler}
-                      />
-                    ),
-                  )
-                : totalBrands.map((_) => {
-                    return (
-                      <>
-                        <li className='text-center relative border border-gray-200 border-solid'>
-                          <FeaturedSkeleton />
-                        </li>
-                      </>
-                    );
-                  })}
+              {brandsData &&
+                brandsData?.length > 0 &&
+                brandsData.map((product: GetlAllProductList, index: number) => (
+                  <BrandProduct
+                    key={index}
+                    product={product}
+                    colorChangeHandler={colorChangeHandler}
+                  />
+                ))}
             </ul>
           </div>
         </div>
@@ -86,4 +64,4 @@ const BrandProductListing: React.FC<_props> = ({
   );
 };
 
-export default BrandProductListing;
+export default ProductListing;

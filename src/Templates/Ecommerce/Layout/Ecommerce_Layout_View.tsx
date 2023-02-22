@@ -5,7 +5,7 @@ import { useTypedSelector } from 'hooks';
 import { useRouter } from 'next/router';
 import React, { useEffect, useMemo, useState } from 'react';
 import { _MenuItems } from 'show.type';
-import { BreadCrumb, Footer, Header, NotificationBar } from './Components';
+import { BreadCrumb, Footer, Header } from './Components';
 
 interface _props {
   children: React.ReactNode;
@@ -53,7 +53,6 @@ const Ecommerce_Layout: React.FC<_props> = ({
 
   return (
     <>
-      <NotificationBar />
       <Header
         storeCode={header.storeCode}
         logoUrl={{

@@ -183,7 +183,7 @@ const MyCartIcon: React.FC = () => {
                           <div className=''>
                             <Link
                               className='inline-block'
-                              href='product-page.html'
+                              href={`/${cartItem.seName}`}
                             >
                               {cartItem.productName}
                             </Link>

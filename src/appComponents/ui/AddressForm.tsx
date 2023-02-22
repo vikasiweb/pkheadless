@@ -362,7 +362,7 @@ const AddressForm: React.FC<Props> = ({
                     />
                   </div>
                   <div className='text-red-500 text-s mt-1'>
-                    {touched.phone && errors.phone}
+                    {touched.companyName && errors.companyName}
                   </div>
                 </div>
               </div>

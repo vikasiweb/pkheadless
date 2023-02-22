@@ -1,4 +1,5 @@
 import { combineReducers } from '@reduxjs/toolkit';
+import cacheSlice from './slices/cache.slice';
 import cartReducer from './slices/cart.slice';
 import compareReducer from './slices/compare.slice';
 import employeeReducer from './slices/employee.slice';
@@ -23,6 +24,7 @@ const rootReducer = combineReducers({
   home: homeReducer,
   employee: employeeReducer,
   wishlist: wishlistReducer,
+  cache: cacheSlice,
 });
 
 export default rootReducer;
